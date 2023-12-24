@@ -4,7 +4,12 @@ import com.ecommerce.user.beans.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    User findByEmail(String emailAddress);
+   Optional<User> findByEmail(String emailAddress);
+
+   boolean existsByEmail(String emailAddress);
+
 }

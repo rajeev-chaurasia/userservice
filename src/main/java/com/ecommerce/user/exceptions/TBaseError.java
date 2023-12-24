@@ -6,8 +6,10 @@ import org.springframework.http.HttpStatus;
 @Getter
 public enum TBaseError {
 
-    invalidEmailAddress("E001", "Invalid email address", HttpStatus.BAD_REQUEST),
-    userNotFound("E002", "No user exists for email :: {}", HttpStatus.NOT_FOUND)
+    invalidUserToken("E001", "Invalid login token", HttpStatus.UNAUTHORIZED),
+    nonUniqueEmailAddress("E002", "Email address must be unique", HttpStatus.BAD_REQUEST),
+    userNotFound("E003", "User not found", HttpStatus.NOT_FOUND),
+    passwordNotMatched("E004", "Old password did not match with the records", HttpStatus.BAD_REQUEST),
     ;
 
     private final String code;

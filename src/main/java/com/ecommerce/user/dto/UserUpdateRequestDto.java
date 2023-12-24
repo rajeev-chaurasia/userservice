@@ -2,14 +2,20 @@ package com.ecommerce.user.dto;
 
 import lombok.Data;
 
-@Data
-public class UserInfoResponseDto {
+import javax.validation.constraints.Email;
 
-    private Long id;
+@Data
+public class UserUpdateRequestDto {
+
     private String firstName;
+
     private String lastName;
+
+    @Email(message = "Invalid email address")
     private String email;
+
     private ContactDto contact;
+
     private AddressDto address;
 
 }

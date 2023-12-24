@@ -6,6 +6,9 @@ import javax.persistence.*;
 
 @Entity
 @Data
+@Table(name = "user", indexes = {
+        @Index(name = "idx_email", columnList = "email")
+})
 public class User {
 
     @Id
