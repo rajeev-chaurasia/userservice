@@ -13,7 +13,7 @@ public class UserValidator {
     private final UserRepository userRepository;
 
     public boolean validateUniqueEmailAddress(String emailAddress) {
-        if(!userRepository.existsByEmail(emailAddress))
+        if(userRepository.existsByEmail(emailAddress))
             throw new TBaseRuntimeException(TBaseError.nonUniqueEmailAddress);
 
         return true;

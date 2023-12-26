@@ -79,14 +79,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserInfoResponseDto findByEmail(String emailAddress) {
-        Optional<User> user = userRepository.findByEmail(emailAddress);
-
-        if(user.isEmpty()) {
-            throw new TBaseRuntimeException(TBaseError.userNotFound);
-        }
-
-        return MapperUtils.convertUserToUserInfoResponseDto(user.get());
+    public UserInfoResponseDto getUserProfileByEmail(String emailAddress) {
+        User existingUser = findByEmail(emailAddress);
+        return MapperUtils.convertUserToUserInfoResponseDto(existingUser);
     }
 
     @Override
@@ -94,8 +89,18 @@ public class UserServiceImpl implements UserService {
         userRepository.deleteById(userId);
     }
 
-    private User findById(Long userId) {
+    public User findById(Long userId) {
         Optional<User> user = userRepository.findById(userId);
+        if(user.isEmpty()) {
+            throw new TBaseRuntimeException(TBaseError.userNotFound);
+        }
+
+        return user.get();
+    }
+
+    public User findByEmail(String emailAddress) {
+        Optional<User> user = userRepository.findByEmail(emailAddress);
+
         if(user.isEmpty()) {
             throw new TBaseRuntimeException(TBaseError.userNotFound);
         }

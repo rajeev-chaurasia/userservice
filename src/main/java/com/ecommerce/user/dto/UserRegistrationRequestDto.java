@@ -3,10 +3,7 @@ package com.ecommerce.user.dto;
 import lombok.Data;
 
 import javax.validation.Valid;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 @Data
 public class UserRegistrationRequestDto {
@@ -21,6 +18,7 @@ public class UserRegistrationRequestDto {
     @Email(message = "Invalid email address")
     private String email;
 
+    @NotNull(message = "Contact is required.")
     @Valid
     private ContactDto contact;
 
@@ -30,6 +28,7 @@ public class UserRegistrationRequestDto {
             message = "Password must contain at least one digit, one lowercase and one uppercase letter, one special character, and no whitespaces")
     private String password;
 
+    @NotNull(message = "Address is required.")
     @Valid
     private AddressDto address;
 }

@@ -1,15 +1,25 @@
 package com.ecommerce.user.exceptions;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-@ControllerAdvice
+import javax.validation.ValidationException;
+import java.util.Map;
+
+@Slf4j
+@RestControllerAdvice
 public class TBaseExceptionHandler {
 
-    @ExceptionHandler(TBaseRuntimeException.class)
-    public ResponseEntity<ErrorResponse> handleTBaseRuntimeException(TBaseRuntimeException ex) {
-        return ResponseEntity.status(ex.getHttpStatus())
-                .body(new ErrorResponse(ex.getErrorCode(), ex.getErrorMessage()));
+    @ExceptionHandler(value = TBaseRuntimeException.class)
+    public ResponseEntity<Map<String, Object>> handleException(TBaseRuntimeException ex) {
+        return TResponseEntityBuilder.errorResponseEntity(ex);
+    }
+
+    @ExceptionHandler(value = MethodArgumentNotValidException.class)
+    public ResponseEntity<Map<String, Object>> handleValidationException(MethodArgumentNotValidException ex) {
+        return TResponseEntityBuilder.errorResponseEntity(ex);
     }
 }

@@ -26,5 +26,14 @@ public class TBaseRuntimeException extends RuntimeException {
         this.params = params;
     }
 
+    public TBaseRuntimeException(Throwable cause) {
+        super(cause);
+    }
+
+    public TBaseRuntimeException(String message) {
+        super(message);
+    }
+
+
 
 }

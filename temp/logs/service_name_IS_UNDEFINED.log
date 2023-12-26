@@ -1,0 +1,152 @@
+[2023-12-26 21:02:27.042] ERROR [restartedMain] [o.s.boot.SpringApplication] tlog_c_CLUSTER_TYPE_IS_UNDEFINED_service_name_IS_UNDEFINED_____ m_ [Application run failed] [%PARSER_ERROR[customStack]] !tlog_end
+
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@2cd3fdcb - There is no conversion class registered for conversion word [customStack]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@2cd3fdcb - [customStack] is not a valid conversion word
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:82)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:117)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:111)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:62)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:374)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ecommerce.user.launcher.USLauncher.main(USLauncher.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@2cd3fdcb - There is no conversion class registered for conversion word [customStack]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@2cd3fdcb - [customStack] is not a valid conversion word
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:232)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	... 23 common frames omitted
+[2023-12-26 21:02:27.112] ERROR [restartedMain] [o.s.boot.SpringApplication] tlog_c_CLUSTER_TYPE_IS_UNDEFINED_service_name_IS_UNDEFINED_____ m_ [Application run failed] [%PARSER_ERROR[customStack]] !tlog_end
+
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@7be4eb43 - There is no conversion class registered for conversion word [customStack]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@7be4eb43 - [customStack] is not a valid conversion word
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:82)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:117)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:111)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:62)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:374)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ecommerce.user.launcher.USLauncher.main(USLauncher.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@7be4eb43 - There is no conversion class registered for conversion word [customStack]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@7be4eb43 - [customStack] is not a valid conversion word
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:232)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	... 23 common frames omitted
+[2023-12-26 21:04:49.675]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[Starting USLauncher using Java 11.0.20 on MBP-XCQX7427LK with PID 23790 (/Users/rrchaurasia/Desktop/ECommerce/userservice/build/classes/java/main started by rrchaurasia in /Users/rrchaurasia/Desktop/ECommerce/userservice)]!tlog_end
+
+[2023-12-26 21:04:49.676]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[No active profile set, falling back to default profiles: default]!tlog_end
+
+[2023-12-26 21:04:49.995]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[Starting USLauncher using Java 11.0.20 on MBP-XCQX7427LK with PID 49948 (/Users/rrchaurasia/Desktop/ECommerce/userservice/build/classes/java/main started by rrchaurasia in /Users/rrchaurasia/Desktop/ECommerce/userservice)]!tlog_end
+
+[2023-12-26 21:04:49.996]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[No active profile set, falling back to default profiles: default]!tlog_end
+
+[2023-12-26 21:04:50.105]  WARN [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] tlog_c_[spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning]!tlog_end
+
+[2023-12-26 21:04:50.285]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[Started USLauncher in 0.654 seconds (JVM running for 2378.133)]!tlog_end
+
+[2023-12-26 21:04:51.529]  WARN [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] tlog_c_[spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning]!tlog_end
+
+[2023-12-26 21:04:51.971]  WARN [restartedMain] [o.s.b.d.a.OptionalLiveReloadServer] tlog_c_[Unable to start LiveReload server]!tlog_end
+
+[2023-12-26 21:04:52.014]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[Started USLauncher in 2.209 seconds (JVM running for 3.854)]!tlog_end
+
+[2023-12-26 21:05:27.968]  WARN [http-nio-8091-exec-1] [o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver] tlog_c_[Resolved [org.springframework.security.authentication.InternalAuthenticationServiceException]]!tlog_end
+
+[2023-12-26 21:05:48.919]  WARN [http-nio-8091-exec-2] [o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver] tlog_c_[Resolved [org.springframework.security.authentication.InternalAuthenticationServiceException]]!tlog_end
+
+[2023-12-26 21:05:49.601]  WARN [http-nio-8091-exec-3] [o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver] tlog_c_[Resolved [org.springframework.security.authentication.InternalAuthenticationServiceException]]!tlog_end
+
+[2023-12-26 21:05:50.303]  WARN [http-nio-8091-exec-4] [o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver] tlog_c_[Resolved [org.springframework.security.authentication.InternalAuthenticationServiceException]]!tlog_end
+
+[2023-12-26 21:05:55.846]  WARN [http-nio-8091-exec-5] [o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver] tlog_c_[Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity com.ecommerce.user.api.UserController.registerUser(com.ecommerce.user.dto.UserRegistrationRequestDto) with 2 errors: [Field error in object 'userRegistrationRequestDto' on field 'password': rejected value [null]; codes [NotBlank.userRegistrationRequestDto.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.password,password]; arguments []; default message [password]]; default message [Password is required.]] [Field error in object 'userRegistrationRequestDto' on field 'email': rejected value [null]; codes [NotBlank.userRegistrationRequestDto.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.email,email]; arguments []; default message [email]]; default message [Email address is required.]] ]]!tlog_end
+
+[2023-12-26 21:06:16.147]  WARN [http-nio-8091-exec-6] [o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver] tlog_c_[Resolved [TBaseRuntimeException(errorCode=E002, errorMessage=Email address must be unique, httpStatus=400 BAD_REQUEST, params=null)]]!tlog_end
+
+[2023-12-26 21:10:16.613]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[Starting USLauncher using Java 11.0.20 on MBP-XCQX7427LK with PID 23790 (/Users/rrchaurasia/Desktop/ECommerce/userservice/build/classes/java/main started by rrchaurasia in /Users/rrchaurasia/Desktop/ECommerce/userservice)]!tlog_end
+
+[2023-12-26 21:10:16.614]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[No active profile set, falling back to default profiles: default]!tlog_end
+
+[2023-12-26 21:10:17.175]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[Starting USLauncher using Java 11.0.20 on MBP-XCQX7427LK with PID 53577 (/Users/rrchaurasia/Desktop/ECommerce/userservice/build/classes/java/main started by rrchaurasia in /Users/rrchaurasia/Desktop/ECommerce/userservice)]!tlog_end
+
+[2023-12-26 21:10:17.175]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[No active profile set, falling back to default profiles: default]!tlog_end
+
+[2023-12-26 21:10:17.207]  WARN [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] tlog_c_[spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning]!tlog_end
+
+[2023-12-26 21:10:17.380]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[Started USLauncher in 1.309 seconds (JVM running for 2705.226)]!tlog_end
+
+[2023-12-26 21:10:18.795]  WARN [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] tlog_c_[spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning]!tlog_end
+
+[2023-12-26 21:10:19.209]  WARN [restartedMain] [o.s.b.d.a.OptionalLiveReloadServer] tlog_c_[Unable to start LiveReload server]!tlog_end
+
+[2023-12-26 21:10:19.263]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[Started USLauncher in 2.281 seconds (JVM running for 4.382)]!tlog_end
+
+[2023-12-26 21:10:32.125]  WARN [http-nio-8091-exec-1] [o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver] tlog_c_[Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity com.ecommerce.user.api.UserController.registerUser(com.ecommerce.user.dto.UserRegistrationRequestDto) with 2 errors: [Field error in object 'userRegistrationRequestDto' on field 'contact': rejected value [null]; codes [NotNull.userRegistrationRequestDto.contact,NotNull.contact,NotNull.com.ecommerce.user.dto.ContactDto,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.contact,contact]; arguments []; default message [contact]]; default message [must not be null]] [Field error in object 'userRegistrationRequestDto' on field 'address': rejected value [null]; codes [NotNull.userRegistrationRequestDto.address,NotNull.address,NotNull.com.ecommerce.user.dto.AddressDto,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.address,address]; arguments []; default message [address]]; default message [must not be null]] ]]!tlog_end
+
+[2023-12-26 21:11:29.059]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[Starting USLauncher using Java 11.0.20 on MBP-XCQX7427LK with PID 54377 (/Users/rrchaurasia/Desktop/ECommerce/userservice/build/classes/java/main started by rrchaurasia in /Users/rrchaurasia/Desktop/ECommerce/userservice)]!tlog_end
+
+[2023-12-26 21:11:29.061]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[No active profile set, falling back to default profiles: default]!tlog_end
+
+[2023-12-26 21:11:29.695]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[Starting USLauncher using Java 11.0.20 on MBP-XCQX7427LK with PID 23790 (/Users/rrchaurasia/Desktop/ECommerce/userservice/build/classes/java/main started by rrchaurasia in /Users/rrchaurasia/Desktop/ECommerce/userservice)]!tlog_end
+
+[2023-12-26 21:11:29.695]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[No active profile set, falling back to default profiles: default]!tlog_end
+
+[2023-12-26 21:11:30.087]  WARN [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] tlog_c_[spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning]!tlog_end
+
+[2023-12-26 21:11:30.258]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[Started USLauncher in 0.61 seconds (JVM running for 2778.104)]!tlog_end
+
+[2023-12-26 21:11:30.900]  WARN [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] tlog_c_[spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning]!tlog_end
+
+[2023-12-26 21:11:31.400]  WARN [restartedMain] [o.s.b.d.a.OptionalLiveReloadServer] tlog_c_[Unable to start LiveReload server]!tlog_end
+
+[2023-12-26 21:11:31.441]  INFO [restartedMain] [c.e.user.launcher.USLauncher] tlog_c_[Started USLauncher in 2.748 seconds (JVM running for 3.341)]!tlog_end
+
+[2023-12-26 21:11:41.234]  WARN [http-nio-8091-exec-1] [o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver] tlog_c_[Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity com.ecommerce.user.api.UserController.registerUser(com.ecommerce.user.dto.UserRegistrationRequestDto) with 3 errors: [Field error in object 'userRegistrationRequestDto' on field 'address': rejected value [null]; codes [NotNull.userRegistrationRequestDto.address,NotNull.address,NotNull.com.ecommerce.user.dto.AddressDto,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.address,address]; arguments []; default message [address]]; default message [Address is required.]] [Field error in object 'userRegistrationRequestDto' on field 'contact': rejected value [null]; codes [NotNull.userRegistrationRequestDto.contact,NotNull.contact,NotNull.com.ecommerce.user.dto.ContactDto,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.contact,contact]; arguments []; default message [contact]]; default message [Contact is required.]] [Field error in object 'userRegistrationRequestDto' on field 'password': rejected value [P@ssword@9 845]; codes [Pattern.userRegistrationRequestDto.password,Pattern.password,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.password,password]; arguments []; default message [password],[Ljavax.validation.constraints.Pattern$Flag;@7c33c99,^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\S+$).{8,}$]; default message [Password must contain at least one digit, one lowercase and one uppercase letter, one special character, and no whitespaces]] ]]!tlog_end
+
+[2023-12-26 21:11:59.711]  WARN [http-nio-8091-exec-2] [o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver] tlog_c_[Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity com.ecommerce.user.api.UserController.registerUser(com.ecommerce.user.dto.UserRegistrationRequestDto) with 7 errors: [Field error in object 'userRegistrationRequestDto' on field 'address.city': rejected value [null]; codes [NotBlank.userRegistrationRequestDto.address.city,NotBlank.address.city,NotBlank.city,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.address.city,address.city]; arguments []; default message [address.city]]; default message [City is required.]] [Field error in object 'userRegistrationRequestDto' on field 'address.state': rejected value [null]; codes [NotBlank.userRegistrationRequestDto.address.state,NotBlank.address.state,NotBlank.state,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.address.state,address.state]; arguments []; default message [address.state]]; default message [State is required.]] [Field error in object 'userRegistrationRequestDto' on field 'address.postalCode': rejected value [null]; codes [NotBlank.userRegistrationRequestDto.address.postalCode,NotBlank.address.postalCode,NotBlank.postalCode,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.address.postalCode,address.postalCode]; arguments []; default message [address.postalCode]]; default message [Postal Code is required.]] [Field error in object 'userRegistrationRequestDto' on field 'contact.countryCode': rejected value [null]; codes [NotBlank.userRegistrationRequestDto.contact.countryCode,NotBlank.contact.countryCode,NotBlank.countryCode,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.contact.countryCode,contact.countryCode]; arguments []; default message [contact.countryCode]]; default message [Country code is required.]] [Field error in object 'userRegistrationRequestDto' on field 'address.addressLine': rejected value [null]; codes [NotBlank.userRegistrationRequestDto.address.addressLine,NotBlank.address.addressLine,NotBlank.addressLine,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.address.addressLine,address.addressLine]; arguments []; default message [address.addressLine]]; default message [Address Line is required.]] [Field error in object 'userRegistrationRequestDto' on field 'contact.phoneNumber': rejected value [null]; codes [NotBlank.userRegistrationRequestDto.contact.phoneNumber,NotBlank.contact.phoneNumber,NotBlank.phoneNumber,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.contact.phoneNumber,contact.phoneNumber]; arguments []; default message [contact.phoneNumber]]; default message [Phone number is required.]] [Field error in object 'userRegistrationRequestDto' on field 'address.country': rejected value [null]; codes [NotBlank.userRegistrationRequestDto.address.country,NotBlank.address.country,NotBlank.country,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.address.country,address.country]; arguments []; default message [address.country]]; default message [Country is required.]] ]]!tlog_end
+
+[2023-12-26 21:12:39.243]  WARN [http-nio-8091-exec-3] [o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver] tlog_c_[Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity com.ecommerce.user.api.UserController.registerUser(com.ecommerce.user.dto.UserRegistrationRequestDto) with 5 errors: [Field error in object 'userRegistrationRequestDto' on field 'address.city': rejected value [null]; codes [NotBlank.userRegistrationRequestDto.address.city,NotBlank.address.city,NotBlank.city,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.address.city,address.city]; arguments []; default message [address.city]]; default message [City is required.]] [Field error in object 'userRegistrationRequestDto' on field 'address.state': rejected value [null]; codes [NotBlank.userRegistrationRequestDto.address.state,NotBlank.address.state,NotBlank.state,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.address.state,address.state]; arguments []; default message [address.state]]; default message [State is required.]] [Field error in object 'userRegistrationRequestDto' on field 'address.country': rejected value [null]; codes [NotBlank.userRegistrationRequestDto.address.country,NotBlank.address.country,NotBlank.country,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.address.country,address.country]; arguments []; default message [address.country]]; default message [Country is required.]] [Field error in object 'userRegistrationRequestDto' on field 'address.addressLine': rejected value [null]; codes [NotBlank.userRegistrationRequestDto.address.addressLine,NotBlank.address.addressLine,NotBlank.addressLine,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.address.addressLine,address.addressLine]; arguments []; default message [address.addressLine]]; default message [Address Line is required.]] [Field error in object 'userRegistrationRequestDto' on field 'address.postalCode': rejected value [null]; codes [NotBlank.userRegistrationRequestDto.address.postalCode,NotBlank.address.postalCode,NotBlank.postalCode,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRegistrationRequestDto.address.postalCode,address.postalCode]; arguments []; default message [address.postalCode]]; default message [Postal Code is required.]] ]]!tlog_end
+

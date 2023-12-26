@@ -1,6 +1,7 @@
-package com.ecommerce.user.service.authentication;
+package com.ecommerce.user.launcher;
 
 
+import com.ecommerce.user.service.authentication.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -35,7 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf()
                 .disable()
                 .authorizeRequests()
-                .antMatchers("/auth/login").permitAll()
+                .antMatchers("/**/login/**", "/**/register/**").permitAll()
                 .anyRequest().authenticated();
     }
 

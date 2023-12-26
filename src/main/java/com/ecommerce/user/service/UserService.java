@@ -1,5 +1,6 @@
 package com.ecommerce.user.service;
 
+import com.ecommerce.user.beans.User;
 import com.ecommerce.user.dto.*;
 
 public interface UserService {
@@ -10,7 +11,11 @@ public interface UserService {
 
     void changePassword(Long userId, ChangePasswordRequestDto changePasswordRequest);
 
-    UserInfoResponseDto findByEmail(String emailAddress);
+    UserInfoResponseDto getUserProfileByEmail(String emailAddress);
 
     void deleteUser(Long userId);
+
+    User findById(Long userId);
+
+    User findByEmail(String emailAddress);
 }
