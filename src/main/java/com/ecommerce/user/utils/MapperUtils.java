@@ -9,11 +9,14 @@ import com.ecommerce.user.dto.UserInfoResponseDto;
 import com.ecommerce.user.dto.UserRegistrationRequestDto;
 import lombok.experimental.UtilityClass;
 
+import java.util.UUID;
+
 @UtilityClass
 public class MapperUtils {
 
     public static User convertUserRegistrationRequestDtoToUser(UserRegistrationRequestDto requestDto) {
         User user = new User();
+        user.setId(UUID.randomUUID().toString());
         user.setFirstName(requestDto.getFirstName());
         user.setLastName(requestDto.getLastName());
         user.setEmail(requestDto.getEmail());

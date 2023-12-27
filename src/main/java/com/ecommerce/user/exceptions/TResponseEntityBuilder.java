@@ -7,9 +7,8 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 
-import javax.validation.ValidationException;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TResponseEntityBuilder {
     public static final String SUCCESS = "success";

@@ -43,12 +43,12 @@ dependencies {
 	api 'org.springframework.boot:spring-boot-starter-actuator'
 	api 'org.springframework.boot:spring-boot-starter-validation'
 	api 'javax.validation:validation-api'
-	api 'io.jsonwebtoken:jjwt-api:0.11.2'
-	api 'io.jsonwebtoken:jjwt-impl:0.11.2'
 
-	implementation 'org.slf4j:slf4j-api:1.7.32'
-	implementation 'ch.qos.logback:logback-classic:1.2.6'
+	api 'org.slf4j:slf4j-api:1.7.32'
+	api 'ch.qos.logback:logback-classic:1.2.6'
 
+
+	implementation 'com.github.bastiaanjansen:jwt-java:1.2.0'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
 	testImplementation group: 'junit', name: 'junit', version: '4.12'
@@ -58,4 +58,10 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.boot:spring-boot-dependencies:2.5.4"
+	}
 }

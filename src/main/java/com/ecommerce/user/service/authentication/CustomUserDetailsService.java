@@ -3,6 +3,8 @@ package com.ecommerce.user.service.authentication;
 import com.ecommerce.user.beans.User;
 import com.ecommerce.user.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
@@ -20,6 +22,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         return org.springframework.security.core.userdetails.User.builder()
                 .username(existingUser.getEmail())
                 .password(existingUser.getPassword())
+                .authorities(new SimpleGrantedAuthority("USER"))
                 .build();
     }
 }

@@ -69,7 +69,7 @@ public class UserServiceImpl implements UserService {
         User existingUser = findById(userId);
 
         if(!passwordEncoder.matches(changePasswordRequest.getOldPassword(), existingUser.getPassword())) {
-            throw new TBaseRuntimeException(TBaseError.passwordNotMatched);
+            throw new TBaseRuntimeException(TBaseError.oldPasswordNotMatched);
         }
 
         String newEncodedPassword = passwordEncoder.encode(changePasswordRequest.getNewPassword());

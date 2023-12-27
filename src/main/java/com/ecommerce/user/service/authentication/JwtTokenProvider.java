@@ -1,16 +1,20 @@
 package com.ecommerce.user.service.authentication;
 
+import com.bastiaanjansen.jwt.JWT;
+import com.bastiaanjansen.jwt.algorithms.Algorithm;
+import com.bastiaanjansen.jwt.exceptions.JWTCreationException;
+import com.bastiaanjansen.jwt.exceptions.JWTDecodeException;
 import com.ecommerce.user.exceptions.TBaseError;
 import com.ecommerce.user.exceptions.TBaseRuntimeException;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import io.jsonwebtoken.security.Keys;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Component;
 
-import java.security.Key;
 import java.util.Date;
 
 @Component
@@ -20,33 +24,43 @@ public class JwtTokenProvider {
     @Value("${security.jwt.expiration}")
     private long jwtExpirationInMs;
 
-    private final Key jwtSecretKey;
+    private final Algorithm algorithm;
 
     public JwtTokenProvider() {
-        this.jwtSecretKey = Keys.hmacShaKeyFor(System.getenv("JWT_SECRET").getBytes());
+        this.algorithm = Algorithm.HMAC256(System.getenv("JWT_SECRET"));
     }
 
-    public String generateToken(Authentication authentication) {
-        String userEmail = (String) authentication.getPrincipal();
+    public String generateToken(Authentication authentication) throws JWTCreationException {
+        User userDetails = (User) authentication.getPrincipal();
 
         Date issuedDate = new Date();
         Date expiryDate = new Date(issuedDate.getTime() + jwtExpirationInMs);
 
-        return Jwts.builder()
-                .setSubject(userEmail)
-                .setIssuedAt(issuedDate)
-                .setExpiration(expiryDate)
-                .signWith(jwtSecretKey, SignatureAlgorithm.HS512)
-                .compact();
+        return new JWT.Builder(algorithm)
+                .withIssuedAt(issuedDate)
+                .withExpirationTime(expiryDate)
+                .withClaim("username", userDetails.getUsername())
+                .sign();
      }
 
      public boolean validateToken(String token) {
         try {
-            Jwts.parserBuilder().setSigningKey(jwtSecretKey).build().parseClaimsJws(token);
+            JWT jwt = JWT.fromRawJWT(algorithm, token);
+            jwt.validate();
             return true;
         } catch (Exception e) {
             log.error("Token validation failed with exception :: ", e);
-            throw new TBaseRuntimeException(TBaseError.invalidUserToken);
+            return false;
+        }
+     }
+
+     public String getUserNameFromToken(String token) {
+        try {
+            JWT jwt = JWT.fromRawJWT(algorithm, token);
+            return jwt.getPayload().getClaim("username", String.class);
+        } catch (Exception e) {
+            log.error("Failed to get username from token with exception :: ", e);
+            return null;
         }
      }
 

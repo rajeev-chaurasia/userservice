@@ -1,11 +1,11 @@
 <configuration debug="true">
     <!--<include resource="org/springframework/boot/logging/logback/base.xml"/>-->
     <property name="log_folder" value="temp/logs" />
-    <property name="filename" value="tdp-msg-consumer" />
+    <property name="filename" value="msg-consumer" />
 
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>[%date{yyyy-MM-dd HH:mm:ss.SSS}] ${LOG_LEVEL_PATTERN:-%5p} [%thread] [%logger{35}] tlog_c_[%msg] [%ex{full}] %n%n
+            <pattern>[%date{yyyy-MM-dd HH:mm:ss.SSS}] ${LOG_LEVEL_PATTERN:-%5p} [%thread] [%logger{35}] tlog [%msg] [%ex{full}] %n%n
             </pattern>
         </encoder>
 
@@ -14,7 +14,7 @@
     <appender name="DEFAULT" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <append>true</append>
         <!--<file>/mnt1/logs/api-global-logs.log</file>-->
-        <file>${log_folder}/${service_name}.log</file>
+        <file>${log_folder}/${filename}.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
             <fileNamePattern>${log_folder}/archives/api-global-logs.%i.log.zip</fileNamePattern>
             <minIndex>1</minIndex>
@@ -25,7 +25,7 @@
             <maxFileSize>50MB</maxFileSize>
         </triggeringPolicy>
         <encoder>
-            <pattern>[%date{yyyy-MM-dd HH:mm:ss.SSS}] ${LOG_LEVEL_PATTERN:-%5p} [%thread] [%logger{35}] tlog_c_[%msg]!tlog_end%n%n
+            <pattern>[%date{yyyy-MM-dd HH:mm:ss.SSS}] ${LOG_LEVEL_PATTERN:-%5p} [%thread] [%logger{35}] tlog [%msg] !tlog_end%n%n
             </pattern>
         </encoder>
     </appender>
